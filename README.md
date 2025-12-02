@@ -1,10 +1,23 @@
-# pip install -r requirement.txt
-# python main.py
+# Usage Instructions
 
-truy cập qua API ui FastAPI: 
-      ip:8127/docs
-Post: 
-body json
+## Installation
+
+```
+pip install -r requirement.txt
+python main.py
+```
+
+## Access FastAPI UI
+
+Open in browser:
+
+```
+ip:8127/docs
+```
+
+## POST Request Body Example
+
+```json
 {
   "data": [
     [820, 18, 150, 55, 610],
@@ -14,7 +27,11 @@ body json
     [860, 14, 160, 62, 650]
   ]
 }
-# api
+```
+
+## cURL Example
+
+```
 curl -X 'POST' \
   'http://192.168.1.148:8127/predict' \
   -H 'accept: application/json' \
@@ -27,5 +44,5 @@ curl -X 'POST' \
     [850, 15, 158, 60, 640],
     [860, 14, 160, 62, 650]
   ]
-}
-'
+}'
+```
