@@ -28,7 +28,12 @@ ip:8127/docs
   ]
 }
 ```
-
+### Với các feature tương ứng
+```
+    feature_cols = [
+        'traffic_volume','avg_vehicle_speed', 'vehicle_count_cars','vehicle_count_trucks','vehicle_count_bikes'
+    ]
+```
 ## cURL Example
 
 ```
