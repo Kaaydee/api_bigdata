@@ -56,7 +56,7 @@ model = TrafficGRU(
 ).to(DEVICE)
 
 print("\n===== LOADING MODEL =====")
-state = torch.load("traffic_gru_weights.pth", map_location=DEVICE)
+state = torch.load("best/traffic_gru_weights.pth", map_location=DEVICE)
 model.load_state_dict(state)
 model.eval()
 print("Model loaded successfully!")
@@ -70,7 +70,7 @@ for name, param in model.named_parameters():
 # LOAD SCALER
 # =====================================
 print("\n===== LOADING SCALER =====")
-scaler = joblib.load("traffic_scaler.pkl")
+scaler = joblib.load("best/traffic_scaler.pkl")
 print("Scaler mean:", scaler.mean_)
 print("Scaler scale:", scaler.scale_)
 
